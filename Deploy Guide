@@ -1,0 +1,15 @@
+1. Commit all changes to git main branch
+2. ssh into server
+3. git pull on server
+4. navigate to 'frontend' folder
+5. npm install
+6. execute 'npm run build'
+7. kill previous pm2 daemon via 'pm2 kill'
+8. start frontend with pm2 daemon 'pm2 serve build 40593 --spa'
+9. navigate to backend folder
+10. npm install
+11. verify that .env file is in place
+12. pm2 start [main backend file]
+
+When necessary:
+13. redeploy database data definition file for fresh db
