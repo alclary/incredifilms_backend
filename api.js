@@ -14,7 +14,7 @@ const cors = require("cors");
 // Express configuration
 const express = require("express");
 const app = express();
-const port = process.env.API_PORT;
+const port = process.env.API_PORT || 3000;
 
 // Enable CORS for localhost origin
 app.use(cors({ origin: "*" }));
@@ -38,9 +38,9 @@ app.use("/showtimes", showtimeRoutes);
 app.use("/moviegenres", movieGenreRoutes);
 
 app.get("/", (req, res) => {
-    res.json("Welcome");
+  res.json("Welcome");
 });
 
 app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+  console.log(`Server running on port ${port}`);
 });
